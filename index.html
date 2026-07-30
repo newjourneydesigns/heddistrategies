@@ -1,0 +1,388 @@
+<!-- Home - Modern Heddi -->
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/png" href="Public/Images/favicon.png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Heddi Strategies helps mission-driven organizations align teams, make smarter strategic decisions, and deliver measurable social impact."/>
+<meta property="og:title" content="Heddi Strategies | Strategy for Lasting Social Impact"/>
+<meta property="og:description" content="Mission-led strategic consulting for nonprofits, social enterprises, and growth-stage teams navigating complex change."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://heddi-strategies.netlify.app/Public/Images/og/og-v1-primary.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Heddi Strategies | Strategy for Lasting Social Impact"/>
+<meta name="twitter:description" content="Clear strategy, practical action, and meaningful outcomes for mission-driven organizations."/>
+<meta name="twitter:image" content="https://heddi-strategies.netlify.app/Public/Images/og/og-v1-primary.png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-fixed-variant": "#234e43",
+          "surface-container-high": "#2d2835",
+          "on-error-container": "#ffdad6",
+          "primary-fixed": "#beecdd",
+          "outline": "#8a938f",
+          "surface-container": "#221d2a",
+          "on-primary-container": "#255146",
+          "inverse-primary": "#3c665b",
+          "on-secondary-fixed-variant": "#4b4356",
+          "secondary-fixed": "#eadef6",
+          "on-surface-variant": "#c0c8c4",
+          "on-tertiary": "#2f3131",
+          "surface-dim": "#16111e",
+          "secondary-fixed-dim": "#cdc2d9",
+          "inverse-on-surface": "#342e3c",
+          "surface-bright": "#3c3745",
+          "surface-container-low": "#1e1926",
+          "on-secondary": "#342d3f",
+          "error-container": "#93000a",
+          "outline-variant": "#404845",
+          "on-background": "#e9dff1",
+          "surface": "#16111e",
+          "on-tertiary-fixed-variant": "#454747",
+          "on-primary-fixed": "#002019",
+          "tertiary-fixed-dim": "#c6c6c7",
+          "primary-container": "#95c2b4",
+          "tertiary-container": "#b8b9b9",
+          "surface-tint": "#a2d0c2",
+          "tertiary-fixed": "#e2e2e2",
+          "primary-fixed-dim": "#a2d0c2",
+          "on-primary": "#07372d",
+          "on-secondary-fixed": "#1f1929",
+          "surface-container-lowest": "#110c18",
+          "error": "#ffb4ab",
+          "background": "#16111e",
+          "secondary": "#cdc2d9",
+          "primary": "#b0decf",
+          "surface-variant": "#383240",
+          "surface-container-highest": "#383240",
+          "on-secondary-container": "#bcb1c8",
+          "tertiary": "#d4d5d5",
+          "on-surface": "#e9dff1",
+          "inverse-surface": "#e9dff1",
+          "on-tertiary-container": "#484a4a",
+          "on-tertiary-fixed": "#1a1c1c",
+          "on-error": "#690005"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "fontFamily": {
+          "headline": ["Noto Serif"],
+          "body": ["Manrope"],
+          "label": ["Manrope"]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: #16111e;
+    color: #e9dff1;
+    font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
+  }
+  .font-notoSerif { font-family: "Noto Serif", serif; }
+  .font-manrope { font-family: "Manrope", sans-serif; }
+  .celestial-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.15;
+    pointer-events: none;
+  }
+  .hero-gradient {
+    background: radial-gradient(circle at center, rgba(45, 40, 53, 0.4) 0%, rgba(22, 17, 30, 1) 100%);
+  }
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-fade-h1 {
+    animation: heroFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .hero-fade-sub {
+    animation: heroFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+</style>
+<title>Heddi Strategies</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Heddi Strategies",
+  "url": "index.html",
+  "logo": "Public/Images/Heddi Strategies Logo Mark White.png",
+  "description": "Heddi Strategies helps mission-driven organizations build practical strategy for measurable social impact.",
+  "sameAs": [
+    "https://www.linkedin.com/company/heddi-strategies"
+  ]
+}
+</script>
+<script defer src="Public/site.js"></script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary/30">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[70] focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>
+<div class="fixed inset-0 celestial-grain z-0"></div>
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#16111e]/70 backdrop-blur-[24px] shadow-[0_24px_48px_rgba(0,0,0,0.4)]">
+  <div class="flex justify-between items-center px-8 md:px-16 py-6 w-full max-w-screen-2xl mx-auto">
+    <a href="index.html" class="flex items-center">
+      <img src="Public/Images/Heddi Strategies Logo Type White.png" alt="Heddi Strategies" class="h-8 w-auto">
+    </a>
+    <div class="hidden md:flex items-center gap-10">
+      <a class="text-[#b0decf] border-b border-[#b0decf]/30 pb-1 font-manrope text-sm uppercase tracking-[0.1em]" href="index.html">Home</a>
+      <a class="text-[#cdc2d9] font-manrope text-sm uppercase tracking-[0.1em] hover:text-[#b0decf] transition-all duration-500 ease-in-out" href="about.html">About</a>
+      <a class="text-[#cdc2d9] font-manrope text-sm uppercase tracking-[0.1em] hover:text-[#b0decf] transition-all duration-500 ease-in-out" href="faq.html">FAQ</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-manrope font-semibold text-sm tracking-wide scale-95 active:scale-100 transition-transform hover:brightness-110">
+        Contact Us
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span class="block w-6 h-px bg-[#b0decf] transition-all duration-300"></span>
+        <span class="block w-6 h-px bg-[#b0decf] transition-all duration-300"></span>
+        <span class="block w-6 h-px bg-[#b0decf] transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-[#404845]/20 bg-[#16111e]/95 backdrop-blur-[24px]">
+    <div class="flex flex-col px-8 py-8 space-y-6">
+      <a class="text-[#b0decf] font-manrope text-sm uppercase tracking-[0.1em]" href="index.html">Home</a>
+      <a class="text-[#cdc2d9] font-manrope text-sm uppercase tracking-[0.1em]" href="about.html">About</a>
+      <a class="text-[#cdc2d9] font-manrope text-sm uppercase tracking-[0.1em]" href="faq.html">FAQ</a>
+      <a href="contact.html" class="bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-manrope font-semibold text-sm tracking-wide w-full mt-2 block text-center">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content" class="relative z-10">
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center pt-20 px-8 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="Public/Images/Heddi_Startegies_zafxy6zafxy6zafx-640.webp 640w, Public/Images/Heddi_Startegies_zafxy6zafxy6zafx-1280.webp 1280w, Public/Images/Heddi_Startegies_zafxy6zafxy6zafx-1920.webp 1920w"
+          sizes="100vw"
+        />
+        <img id="hero-img" class="w-full h-full object-cover opacity-60 scale-110 filter grayscale-[20%] will-change-transform" src="Public/Images/Heddi_Startegies_zafxy6zafxy6zafx.jpeg" alt="Heddi Strategies" fetchpriority="high" decoding="async"/>
+      </picture>
+      <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+    <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8">
+      <h1 id="hero-h1" class="hero-fade-h1 font-notoSerif text-5xl md:text-8xl font-bold tracking-tight text-on-surface mb-4 leading-tight">Your mission deserves a strategy that actually works.</h1>
+      <p id="hero-sub" class="hero-fade-sub font-manrope text-base md:text-xl font-light tracking-[0.15em] uppercase text-secondary max-w-2xl mx-auto">Practical, human-centered strategy for nonprofits and public sector teams navigating complex change.</p>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 pt-12">
+        <a class="w-full md:w-auto px-10 py-5 bg-primary-container text-on-primary-container rounded-lg font-manrope font-bold text-sm uppercase tracking-widest transition-all duration-300 hover:shadow-[0_0_30px_rgba(176,222,207,0.3)]" href="contact.html">Contact us</a>
+        <a class="w-full md:w-auto px-10 py-5 border border-outline-variant/30 text-primary rounded-lg font-manrope font-bold text-sm uppercase tracking-widest transition-all duration-300 hover:bg-surface-container-high" href="about.html">About us</a>
+      </div>
+    </div>
+    <script>
+    (function () {
+      var variants = [
+        {
+          h1: "Your mission deserves a strategy that actually works.",
+          sub: "Practical, human-centered strategy for nonprofits and public sector teams navigating complex change."
+        },
+        {
+          h1: "Does your strategy match the size of your mission?",
+          sub: "Closing the gap between good intentions and real, measurable impact — for the teams doing the hard work."
+        },
+        {
+          h1: "Good intentions don't create change. Strategy does.",
+          sub: "We partner with mission-driven leaders to align teams, sharpen priorities, and build momentum that lasts."
+        }
+      ];
+      try {
+        var key = 'heddi_hero_variant';
+        var idx = (parseInt(localStorage.getItem(key) || '-1', 10) + 1) % variants.length;
+        localStorage.setItem(key, String(idx));
+        var v = variants[idx];
+        document.getElementById('hero-h1').textContent = v.h1;
+        document.getElementById('hero-sub').textContent = v.sub;
+      } catch (e) {}
+    })();
+    </script>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="py-32 px-8 md:px-24 bg-surface">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+        <div class="md:col-span-5 space-y-6">
+          <span class="font-manrope text-xs font-extrabold uppercase tracking-[0.4em] text-primary/70">Our Philosophy</span>
+          <h2 class="font-notoSerif text-4xl md:text-6xl leading-tight">Where <span class="italic text-primary">doing good</span> meets <span class="italic">smart collaboration</span>.</h2>
+        </div>
+        <div class="md:col-span-7 pt-4">
+          <p class="font-manrope text-xl md:text-2xl font-light leading-relaxed text-on-surface-variant">
+            Heddi (ເຮັດດີ) — the Lao principle of doing good — is both our name and our north star. For us, that means more than good intentions. It means being thoughtful and deliberate in how we partner, who we center, and what we build together — because we believe real, lasting change happens when organizations and communities are equipped to lead it themselves.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16">
+        <div class="p-8 bg-surface-container-low rounded-lg transition-transform duration-500 hover:-translate-y-2 hover:bg-surface-container-high group">
+          <span class="material-symbols-outlined text-primary text-3xl mb-4 block">diversity_3</span>
+          <h3 class="font-notoSerif text-xl mb-3">Nonprofit Leadership & Strategy</h3>
+          <p class="font-manrope text-sm text-on-surface-variant/70 leading-relaxed">We work with nonprofit executives to strengthen the relationships and systems that drive long-term impact — from funder engagement and board health to team retention and peer collaboration.</p>
+        </div>
+        <div class="p-8 bg-surface-container-low rounded-lg transition-transform duration-500 hover:-translate-y-2 hover:bg-surface-container-high group">
+          <span class="material-symbols-outlined text-primary text-3xl mb-4 block">account_balance</span>
+          <h3 class="font-notoSerif text-xl mb-3">Public Sector Consulting</h3>
+          <p class="font-manrope text-sm text-on-surface-variant/70 leading-relaxed">We help local governments design community engagement frameworks that are practical, inclusive, and built to deliver — supporting community development, nonprofit partnerships, and economic mobility initiatives.</p>
+        </div>
+        <div class="p-8 bg-surface-container-low rounded-lg transition-transform duration-500 hover:-translate-y-2 hover:bg-surface-container-high group">
+          <span class="material-symbols-outlined text-primary text-3xl mb-4 block">hub</span>
+          <h3 class="font-notoSerif text-xl mb-3">Community Systems Change</h3>
+          <p class="font-manrope text-sm text-on-surface-variant/70 leading-relaxed">We bring nonprofits and local governments to the same table, building the cross-sector alignment needed to tackle the complex challenges communities face.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology Section -->
+  <section class="py-32 bg-surface-container-lowest">
+    <div class="max-w-screen-xl mx-auto px-8">
+      <div class="flex flex-col items-center text-center mb-20">
+        <h2 class="font-notoSerif text-5xl md:text-7xl mb-8">Better Strategies For Greater Good.</h2>
+          <p class="font-manrope text-lg text-secondary/60 max-w-2xl uppercase tracking-widest">Our approach is practical, rigorous, and human-centered.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-outline-variant/10 overflow-hidden rounded-xl border border-outline-variant/15">
+        <div class="bg-surface p-12 space-y-6">
+          <div class="text-primary text-4xl font-notoSerif">01</div>
+          <h4 class="font-notoSerif text-2xl uppercase tracking-tighter">Observation</h4>
+            <p class="font-manrope text-on-surface-variant leading-relaxed">We start by understanding your mission, current reality, and constraints to identify where strategic action will matter most.</p>
+        </div>
+        <div class="bg-surface p-12 space-y-6">
+          <div class="text-primary text-4xl font-notoSerif">02</div>
+          <h4 class="font-notoSerif text-2xl uppercase tracking-tighter">Alignment</h4>
+            <p class="font-manrope text-on-surface-variant leading-relaxed">We align your strengths, stakeholders, and goals so each decision moves your organization toward meaningful results.</p>
+        </div>
+        <div class="bg-surface p-12 space-y-6">
+          <div class="text-primary text-4xl font-notoSerif">03</div>
+          <h4 class="font-notoSerif text-2xl uppercase tracking-tighter">Execution</h4>
+            <p class="font-manrope text-on-surface-variant leading-relaxed">We translate strategy into action plans your team can execute with confidence, accountability, and momentum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta-section" class="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="Public/Images/Heddi_Strategies_earth-640.webp 640w, Public/Images/Heddi_Strategies_earth-1280.webp 1280w, Public/Images/Heddi_Strategies_earth-1920.webp 1920w"
+          sizes="100vw"
+        />
+        <img id="cta-img" class="w-full h-full object-cover opacity-30 scale-110 will-change-transform" src="Public/Images/Heddi_Strategies_earth.jpg" alt="Earth viewed from space" loading="lazy" decoding="async"/>
+      </picture>
+      <div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface"></div>
+    </div>
+    <div class="relative z-10 text-center px-8">
+      <h3 class="font-notoSerif text-4xl md:text-6xl mb-10 max-w-3xl mx-auto leading-tight">Ready to turn your mission into measurable impact?</h3>
+      <a class="inline-block px-12 py-6 bg-primary-container text-on-primary-container rounded-lg font-manrope font-extrabold text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(176,222,207,0.4)]" href="contact.html#contact-form">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <section class="py-28 px-8 md:px-24 bg-surface-container-lowest border-t border-outline-variant/10">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
+        <div>
+          <p class="font-manrope text-xs uppercase tracking-[0.3em] text-primary/75 font-extrabold">Trust Signals</p>
+          <h3 class="font-notoSerif text-4xl md:text-5xl mt-4">Built for leaders navigating complex change.</h3>
+        </div>
+        <a href="faq.html" class="font-manrope text-sm uppercase tracking-[0.15em] text-primary hover:text-on-surface transition-colors">Read More FAQs</a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-outline-variant/15 rounded-xl overflow-hidden mb-12">
+        <div class="bg-surface p-10">
+          <p class="font-notoSerif text-5xl text-primary">15+</p>
+          <p class="font-manrope uppercase tracking-widest text-xs mt-3 text-on-surface-variant">Years of combined strategy experience</p>
+        </div>
+        <div class="bg-surface p-10">
+          <p class="font-notoSerif text-5xl text-primary">45</p>
+          <p class="font-manrope uppercase tracking-widest text-xs mt-3 text-on-surface-variant">Minute discovery call to scope priorities</p>
+        </div>
+        <div class="bg-surface p-10">
+          <p class="font-notoSerif text-5xl text-primary">2</p>
+          <p class="font-manrope uppercase tracking-widest text-xs mt-3 text-on-surface-variant">Business-day response commitment</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article class="p-8 bg-surface-container-low rounded-lg">
+          <p class="font-manrope text-xs uppercase tracking-[0.25em] text-primary/70 mb-4">Representative Engagement</p>
+          <h4 class="font-notoSerif text-2xl mb-3">Nonprofit Strategy Reset</h4>
+          <p class="font-manrope text-on-surface-variant leading-relaxed">Clarified strategic priorities, aligned leadership around a single roadmap, and translated long-term goals into a quarter-by-quarter execution plan.</p>
+        </article>
+        <article class="p-8 bg-surface-container-low rounded-lg">
+          <p class="font-manrope text-xs uppercase tracking-[0.25em] text-primary/70 mb-4">Representative Engagement</p>
+          <h4 class="font-notoSerif text-2xl mb-3">Growth-Stage Team Alignment</h4>
+          <p class="font-manrope text-on-surface-variant leading-relaxed">Supported cross-functional alignment during rapid growth by building shared decision criteria, clearer ownership, and practical governance rhythms.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-14 md:py-20 bg-[#110c18] border-t border-[#404845]/15">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 px-6 md:px-16 max-w-screen-2xl mx-auto">
+    <div class="flex flex-col items-center md:items-start gap-3">
+      <img src="Public/Images/Heddi Strategies Logo Mark White.png" alt="Heddi Strategies" class="h-7 w-auto opacity-50">
+      <span class="font-manrope text-xs uppercase tracking-[0.2em] text-[#cdc2d9]/70 text-center md:text-left block leading-relaxed">© <span data-current-year></span> Heddi Strategies. Doing good, better.</span>
+    </div>
+    <div class="grid grid-cols-2 gap-2 w-full max-w-sm md:w-auto md:max-w-none md:flex md:items-center md:gap-8">
+      <a class="font-manrope text-xs uppercase tracking-[0.2em] text-[#cdc2d9]/70 hover:text-white transition-opacity duration-300 opacity-90 hover:opacity-100 text-center rounded-md px-2 py-2.5 md:p-0 bg-[#1e1926] md:bg-transparent border border-[#404845]/25 md:border-0" href="https://www.linkedin.com/company/heddi-strategies" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="font-manrope text-xs uppercase tracking-[0.2em] text-[#cdc2d9]/70 hover:text-white transition-opacity duration-300 opacity-90 hover:opacity-100 text-center rounded-md px-2 py-2.5 md:p-0 bg-[#1e1926] md:bg-transparent border border-[#404845]/25 md:border-0" href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const heroImg = document.getElementById('hero-img');
+    const ctaSection = document.getElementById('cta-section');
+    const ctaImg = document.getElementById('cta-img');
+
+    function update() {
+      const scrollY = window.scrollY;
+
+      // Hero: image drifts down at 35% of scroll speed, creating depth
+      if (heroImg) {
+        heroImg.style.transform = 'translateY(' + (scrollY * 0.35) + 'px) scale(1.1)';
+      }
+
+      // CTA: image shifts relative to how far it is from the viewport center
+      if (ctaImg && ctaSection) {
+        const sectionMid = ctaSection.offsetTop + ctaSection.offsetHeight / 2;
+        const viewMid = scrollY + window.innerHeight / 2;
+        const delta = (viewMid - sectionMid) * 0.2;
+        ctaImg.style.transform = 'translateY(' + delta + 'px) scale(1.1)';
+      }
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  });
+</script>
+</body>
+</html>
