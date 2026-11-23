@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+
 // Site build settings. Pages live in src/, the finished site is written to _site/.
 const esc = (s) => String(s == null ? "" : s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -13,6 +15,10 @@ function inline(text) {
 }
 
 export default function (eleventyConfig) {
+  // The blog stays off the site until "blogEnabled" is set to true in src/_data/site.json.
+  const site = JSON.parse(readFileSync(new URL("./src/_data/site.json", import.meta.url), "utf8"));
+  if (!site.blogEnabled) eleventyConfig.ignores.add("src/insights/**");
+
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   eleventyConfig.addFilter("inline", inline);

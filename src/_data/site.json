@@ -7,5 +7,6 @@
   "founderLinkedin": "https://www.linkedin.com/in/courtdouang/",
   "ogImage": "/assets/img/og/og-v1-primary.png",
   "web3formsKey": "5b0224c4-584d-4b70-8180-2f5de219e8fb",
-  "newsletterName": "The Heddi Brief"
+  "newsletterName": "The Heddi Brief",
+  "blogEnabled": false
 }
