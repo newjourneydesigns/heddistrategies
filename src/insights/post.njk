@@ -1,0 +1,127 @@
+---
+layout: base.njk
+nav: insights
+ogType: article
+pagination:
+  data: blog.posts
+  size: 1
+  alias: post
+permalink: "/insights/{{ post.slug }}/"
+eleventyComputed:
+  title: "{{ (post.meta_title or post.title) | plain }} | Heddi Strategies"
+  description: "{{ post.meta_description or post.summary }}"
+  ogImage: "{{ post.image_url or site.ogImage }}"
+---
+{%- set shareUrl = page.url | absUrl(site.url) %}
+{%- set serif = "font-family: 'Noto Serif', Georgia, serif" %}
+<article>
+<header style="background: #734141; color: #ffffff; position: relative; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; right: -100px; top: -160px; width: 340px; height: 340px; border-radius: 50%; background: #ce8054"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 56px clamp(20px, 5vw, 64px) 88px">
+<a class="hs-navlink" href="/insights/" style="display: inline-flex; align-items: center; gap: 8px; color: #f0c4a4; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; min-height: 44px"><span class="material-symbols-outlined" aria-hidden="true" style="font-size: 18px">arrow_back</span>ALL INSIGHTS</a>
+<p style="margin: 40px 0 28px; font-size: 12px; font-weight: 800; letter-spacing: 0.3em; color: #f0c4a4">{{ post.topicLabel | upper }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end">
+<h1 style="flex: 7 1 560px; min-width: 0; margin: 0; {{ serif }}; font-weight: 400; font-size: clamp(40px, 5.5vw, 80px); line-height: 1.06; letter-spacing: -0.02em; color: #ffffff">{{ post.title | headline("#f0c4a4") | safe }}</h1>
+<div style="flex: 5 1 320px; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #ffffff">{{ post.summary }}</p>
+<div style="display: flex; align-items: center; gap: 16px">
+<div aria-hidden="true" style="width: 48px; height: 48px; border-radius: 50%; background: #503237; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif', serif; font-size: 18px; color: #ffffff">H</div>
+<div>
+<p style="margin: 0; font-size: 15px; font-weight: 600; color: #ffffff">{{ post.author_name }}</p>
+<p style="margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; color: #f0c4a4">{% if post.day %}<time datetime="{{ post.day }}">{{ post.dateLabel }}</time>{% else %}{{ post.dateLabel }}{% endif %} · {{ post.readTime }} MIN READ</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+{%- if post.image_url %}
+<div style="max-width: 1440px; margin: 0 auto; height: clamp(280px, 38vw, 560px); position: relative; overflow: hidden; background: #2b3a49">
+<img src="{{ post.image_url }}" alt="{{ post.image_alt }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+</div>
+{%- else %}
+<div role="img" aria-label="Featured image placeholder" style="max-width: 1440px; margin: 0 auto; height: clamp(280px, 38vw, 560px); position: relative; overflow: hidden; background: #2b3a49; display: flex; align-items: flex-end; padding: 28px clamp(20px, 5vw, 64px); box-sizing: border-box">
+<div aria-hidden="true" style="position: absolute; right: 20%; top: 14%; width: 180px; height: 180px; border-radius: 50%; background: #ce8054"></div>
+<div aria-hidden="true" style="position: absolute; left: 14%; top: 40%; width: 72%; height: 26%; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 50%; transform: rotate(-7deg)"></div>
+<span style="position: relative; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; color: #ffffff">[FEATURED IMAGE: FULL BLEED]</span>
+</div>
+{%- endif %}
+
+<div style="max-width: 1280px; margin: 0 auto; padding: 96px clamp(20px, 5vw, 64px) 128px; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start">
+<aside class="hs-toc" aria-label="In this article" style="flex: 1 1 220px; max-width: 280px">
+{%- if post.toc.length %}
+<p style="margin: 0 0 20px; font-size: 11px; font-weight: 800; letter-spacing: 0.3em; color: #4f6a51">IN THIS ARTICLE</p>
+<ol style="margin: 0 0 40px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px">
+{%- for t in post.toc %}
+<li><a class="hs-link" href="#{{ t.id }}" style="display: flex; gap: 14px; align-items: baseline; padding: 10px 0; text-decoration: none; color: #4a5866; font-size: 15px"><span style="font-family: 'Noto Serif', serif; font-size: 14px">{{ t.num }}</span>{{ t.text }}</a></li>
+{%- endfor %}
+</ol>
+{%- endif %}
+<div style="display: flex; gap: 8px">
+<a class="hs-share" href="https://www.linkedin.com/sharing/share-offsite/?url={{ shareUrl | urlencode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="width: 44px; height: 44px; border-radius: 4px; background: #2b3a49; display: flex; align-items: center; justify-content: center; color: #ffffff; text-decoration: none"><span class="material-symbols-outlined" aria-hidden="true" style="font-size: 20px">share</span></a>
+<a class="hs-share" href="{{ shareUrl }}" data-copy-link aria-label="Copy link" style="width: 44px; height: 44px; border-radius: 4px; background: #5d7b5f; display: flex; align-items: center; justify-content: center; color: #ffffff; text-decoration: none"><span class="material-symbols-outlined" aria-hidden="true" style="font-size: 20px">link</span></a>
+<a class="hs-share" href="mailto:?subject={{ post.title | plain | urlencode }}&amp;body={{ shareUrl | urlencode }}" aria-label="Email this article" style="width: 44px; height: 44px; border-radius: 4px; background: #ae5f32; display: flex; align-items: center; justify-content: center; color: #ffffff; text-decoration: none"><span class="material-symbols-outlined" aria-hidden="true" style="font-size: 20px">mail</span></a>
+</div>
+</aside>
+
+<div class="hs-prose" style="flex: 999 1 560px; min-width: 0; max-width: 720px; font-size: 18px; line-height: 1.8; color: #4a5866">
+{{ post.html | safe }}
+
+{%- if post.takeaways.length %}
+<section id="takeaways" aria-label="Key takeaways" style="margin: 64px 0 0; background: #5d7b5f; border-radius: 8px; padding: 40px; scroll-margin-top: 100px">
+<p style="margin: 0 0 20px; font-size: 12px; font-weight: 800; letter-spacing: 0.3em; color: #ffffff; font-family: 'Manrope', sans-serif; line-height: 1.6">KEY TAKEAWAYS</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 17px; line-height: 1.6; color: #ffffff">
+{%- for item in post.takeaways %}
+<li style="display: flex; gap: 14px"><span class="material-symbols-outlined" aria-hidden="true" style="font-size: 22px; color: #ffffff; flex: none">task_alt</span>{{ item }}</li>
+{%- endfor %}
+</ul>
+</section>
+{%- endif %}
+
+{%- if post.author_bio %}
+<div style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; background: #503237; border-radius: 8px; padding: 32px">
+<img src="/assets/img/heddi-logo-mark-white.png" alt="" aria-hidden="true" loading="lazy" style="height: 40px; width: auto">
+<div style="flex: 1 1 280px">
+<p style="margin: 0 0 4px; font-size: 11px; font-weight: 800; letter-spacing: 0.25em; color: #f0c4a4">ABOUT THE AUTHOR</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ffffff">{{ post.author_bio }}</p>
+</div>
+</div>
+{%- endif %}
+</div>
+</div>
+</article>
+
+{%- if post.related.length %}
+<section aria-label="Related articles" style="background: #ebe5de; padding: 112px 0 128px">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 48px">
+<h2 style="margin: 0; {{ serif }}; font-weight: 400; font-size: clamp(32px, 3.5vw, 48px); line-height: 1.1; color: #1f2a36">Keep reading</h2>
+<a class="hs-link" href="/insights/" style="display: inline-flex; align-items: center; gap: 8px; color: #9a5229; text-decoration: none; font-size: 12px; font-weight: 800; letter-spacing: 0.2em; min-height: 44px">ALL INSIGHTS <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 18px">arrow_forward</span></a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 24px">
+{%- for r in post.related %}
+<a class="hs-card" href="/insights/{{ r.slug }}/" style="display: flex; flex-direction: column; background: #ffffff; border-radius: 8px; overflow: hidden; text-decoration: none; color: inherit">
+<div style="background: {{ r.color }}; padding: 24px 32px; display: flex; align-items: center">
+<span class="material-symbols-outlined" aria-hidden="true" style="font-size: 30px; color: #ffffff">{{ r.topicIcon }}</span>
+</div>
+<div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 11px; font-weight: 800; letter-spacing: 0.25em; color: #9a5229">{{ r.topicLabel | upper }}</p>
+<h3 style="margin: 0; {{ serif }}; font-weight: 400; font-size: 24px; line-height: 1.25; color: #1f2a36">{{ r.title | plain }}</h3>
+<p style="margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; color: #4f6a51">{{ r.dateLabel }} · {{ r.readTime }} MIN READ</p>
+</div>
+</a>
+{%- endfor %}
+</div>
+</div>
+</section>
+{%- endif %}
+
+<section aria-label="Book a discovery call" style="background: #ae5f32; color: #ffffff; position: relative; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; left: -140px; bottom: -220px; width: 420px; height: 420px; border-radius: 50%; background: #b0634f"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 128px clamp(20px, 5vw, 64px); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 32px">
+<h2 style="margin: 0; max-width: 860px; {{ serif }}; font-weight: 400; font-size: clamp(36px, 4.5vw, 64px); line-height: 1.1; letter-spacing: -0.02em; color: #ffffff">Ready to turn your mission into <em>measurable impact</em>?</h2>
+<p style="margin: 0; max-width: 560px; font-size: 18px; color: #ffffff">A 45-minute discovery call to scope your priorities. We respond within 2 business days.</p>
+<a class="hs-btn" href="/contact/" style="background: #2b3a49; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 800; letter-spacing: 0.15em; padding: 0 32px; min-height: 52px; display: inline-flex; align-items: center; border-radius: 4px">BOOK A DISCOVERY CALL</a>
+</div>
+</section>
