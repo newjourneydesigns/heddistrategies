@@ -1,0 +1,5 @@
+/insights            /insights.html   200
+/insights/           /insights.html   200
+/insights/:slug      /article.html    200
+/studio              /studio/index.html 200
+/unsubscribe         /unsubscribe.html 200
