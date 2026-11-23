@@ -1,0 +1,135 @@
+# Pages CMS settings (https://pagescms.org). This file decides what editors see in the CMS.
+# Articles are saved as files in content/posts/. Saving in the CMS updates the live site in about a minute.
+
+media:
+  input: src/assets/uploads
+  output: /assets/uploads
+  rename: safe
+  categories: [image]
+
+content:
+  - name: posts
+    label: Articles
+    type: collection
+    path: content/posts
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      fields: [title, topic, date, draft, featured]
+      primary: title
+      sort: [date, title]
+      search: [title, summary]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+        description: "Tip: wrap one phrase in *asterisks* and it shows as the colored italic on the blog."
+      - name: summary
+        label: Summary
+        type: text
+        required: true
+        description: One or two sentences. Shown on the blog cards and at the top of the article.
+      - name: topic
+        label: Topic
+        type: select
+        required: true
+        options:
+          values:
+            - { name: nonprofit, label: Nonprofit Leadership }
+            - { name: public, label: Public Sector }
+            - { name: systems, label: Systems Change }
+            - { name: approach, label: Our Approach }
+      - name: date
+        label: Publish date
+        type: date
+        description: The article appears on the site on this date. Pick a future date to schedule it.
+        options:
+          format: yyyy-MM-dd
+      - name: draft
+        label: Draft
+        type: boolean
+        description: Turn on to keep this article off the site while you work on it.
+      - name: featured
+        label: Feature on blog home
+        type: boolean
+        description: Shows this article in the large spot at the top of Insights. Feature only one at a time.
+      - name: author
+        label: Author
+        type: string
+      - name: author_bio
+        label: Author bio
+        type: text
+        description: One or two lines shown at the end of the article. Optional.
+      - name: image
+        label: Featured image
+        type: image
+        description: 1600 x 900 works best.
+      - name: image_alt
+        label: Featured image description
+        type: string
+        description: Describe the image for people using screen readers.
+      - name: body
+        label: Article
+        type: rich-text
+        description: "Heading 2 starts a numbered section. A quote becomes the dark pull quote; put the name on its own line under the quote."
+      - name: takeaways
+        label: Key takeaways
+        type: string
+        list:
+          max: 5
+        description: Optional. Short points shown in the green box at the end.
+      - name: color
+        label: Card color
+        type: select
+        description: Optional. Background of the blog card when there is no featured image.
+        options:
+          values:
+            - { name: "#734141", label: Maroon }
+            - { name: "#2b3a49", label: Navy }
+            - { name: "#5d7b5f", label: Sage }
+            - { name: "#ae5f32", label: Orange }
+            - { name: "#503237", label: Plum }
+            - { name: "#ab604d", label: Clay }
+      - name: meta_title
+        label: Search title
+        type: string
+        description: Optional. Title shown in Google. Keep under 60 characters.
+        options:
+          maxlength: 60
+      - name: meta_description
+        label: Search description
+        type: text
+        description: Optional. Description shown in Google. Keep under 160 characters.
+        options:
+          maxlength: 160
+
+  - name: faq
+    label: FAQ
+    type: file
+    path: src/_data/faq.json
+    format: json
+    list: true
+    fields:
+      - name: q
+        label: Question
+        type: string
+        required: true
+      - name: a
+        label: Answer
+        type: text
+        required: true
+      - name: color
+        label: Number color
+        type: select
+        options:
+          values:
+            - { name: "#734141", label: Maroon }
+            - { name: "#2b3a49", label: Navy }
+            - { name: "#5d7b5f", label: Sage }
+            - { name: "#ae5f32", label: Orange }
+            - { name: "#503237", label: Plum }

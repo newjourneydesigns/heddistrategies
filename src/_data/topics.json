@@ -1,0 +1,6 @@
+[
+  { "id": "nonprofit", "label": "Nonprofit Leadership", "icon": "diversity_3" },
+  { "id": "public", "label": "Public Sector", "icon": "account_balance" },
+  { "id": "systems", "label": "Systems Change", "icon": "hub" },
+  { "id": "approach", "label": "Our Approach", "icon": "explore" }
+]

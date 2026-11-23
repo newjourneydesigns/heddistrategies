@@ -1,0 +1,134 @@
+---
+layout: "base.njk"
+nav: "insights"
+permalink: "/insights/"
+title: "Insights | Heddi Strategies"
+description: "Field notes on doing good, better. Practical ideas for nonprofit executives, local government leaders and cross-sector coalitions."
+---
+<section style="background: #2b3a49; color: #ffffff; position: relative; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; right: -120px; top: -190px; width: 380px; height: 380px; border-radius: 50%; background: #ce8054"></div>
+<div aria-hidden="true" style="position: absolute; right: 170px; top: 120px; width: 64px; height: 64px; border-radius: 50%; background: #b0634f"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 112px clamp(20px, 5vw, 64px) 104px">
+<p style="margin: 0 0 32px; font-size: 12px; font-weight: 800; letter-spacing: 0.3em; color: #f0c4a4">INSIGHTS</p>
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end">
+<h1 style="flex: 5 1 440px; margin: 0; font-family: 'Noto Serif', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6vw, 88px); line-height: 1.05; letter-spacing: -0.02em; color: #ffffff">Field notes on <em style="color: #f0c4a4; font-style: italic">doing good</em>, better.</h1>
+<div style="flex: 7 1 420px; max-width: 560px">
+<p style="margin: 0 0 28px; font-size: 18px; line-height: 1.7; color: #d8dcdf">Practical, rigorous, human-centered ideas for nonprofit executives, local government leaders and cross-sector coalitions. What we are learning in the field, written so you can use it on Monday.</p>
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; color: #b9cfba">NONPROFIT LEADERSHIP · PUBLIC SECTOR · SYSTEMS CHANGE</p>
+</div>
+</div>
+</div>
+<div aria-hidden="true" style="display: flex; height: 10px">
+<span style="flex: 3; background: #ae5f32"></span><span style="flex: 2; background: #734141"></span><span style="flex: 2; background: #5d7b5f"></span><span style="flex: 1; background: #503237"></span>
+</div>
+</section>
+
+{% if blog.featured %}{% set f = blog.featured %}
+<section aria-label="Featured article" style="max-width: 1280px; margin: 0 auto; padding: 96px clamp(20px, 5vw, 64px) 128px">
+<a class="hs-card" href="/insights/{{ f.slug }}/" style="display: flex; flex-wrap: wrap; background: #ffffff; border-radius: 8px; overflow: hidden; text-decoration: none; color: inherit">
+{% if f.image_url %}
+<div style="flex: 7 1 480px; min-height: 420px; position: relative; overflow: hidden; background: {{ f.color }}; ">
+<img src="{{ f.image_url }}" alt="{{ f.image_alt }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+</div>
+{% else %}
+<div style="flex: 7 1 480px; min-height: 420px; position: relative; overflow: hidden; background: {{ f.color }}; display: flex; align-items: flex-end; padding: 28px; box-sizing: border-box">
+<div aria-hidden="true" style="position: absolute; right: 18%; top: 16%; width: 150px; height: 150px; border-radius: 50%; background: #ce8054"></div>
+<div aria-hidden="true" style="position: absolute; left: 10%; top: 40%; width: 80%; height: 24%; border: 2px solid rgba(255, 255, 255, 0.35); border-radius: 50%; transform: rotate(-8deg)"></div>
+<span style="position: relative; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; color: #ffffff">[FEATURED IMAGE]</span>
+</div>
+{% endif %}
+<div style="flex: 5 1 360px; padding: clamp(32px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; gap: 20px; box-sizing: border-box">
+<p style="margin: 0; font-size: 12px; font-weight: 800; letter-spacing: 0.25em; color: #9a5229">FEATURED · {{ f.topicLabel | upper }}</p>
+<h2 style="margin: 0; font-family: 'Noto Serif', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3vw, 42px); line-height: 1.15; letter-spacing: -0.01em; color: #1f2a36">{{ f.title | headline("#9a5229") | safe }}</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4a5866">{{ f.summary }}</p>
+<div style="display: flex; align-items: center; gap: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.15em; color: #4f6a51">
+<span>{{ f.author_name | upper }}</span><span aria-hidden="true">·</span><span>{{ f.dateLabel }}</span><span aria-hidden="true">·</span><span>{{ f.readTime }} MIN READ</span>
+</div>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 800; letter-spacing: 0.2em; color: #9a5229">READ THE ARTICLE <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 20px">arrow_forward</span></span>
+</div>
+</a>
+</section>
+{% endif %}
+
+<section aria-label="All articles" style="background: #ebe5de; padding: 96px 0 128px">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px)">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 48px">
+<div>
+<p style="margin: 0 0 12px; font-size: 12px; font-weight: 800; letter-spacing: 0.3em; color: #4f6a51">THE ARCHIVE</p>
+<h2 style="margin: 0; font-family: 'Noto Serif', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.5vw, 48px); line-height: 1.1; color: #1f2a36">Latest articles</h2>
+</div>
+<label style="display: flex; align-items: center; gap: 10px; background: #ffffff; border-radius: 4px; padding: 0 16px; min-height: 48px; flex: 0 1 340px">
+<span class="material-symbols-outlined" aria-hidden="true" style="font-size: 20px; color: #4f6a51">search</span>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search articles</span>
+<input type="search" placeholder="Search articles" data-post-search style="flex: 1; min-width: 0; background: transparent; border: 0; color: #1f2a36; font-family: 'Manrope', sans-serif; font-size: 15px; padding: 12px 0" />
+</label>
+</div>
+
+<div role="group" aria-label="Filter by topic" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px">
+<button type="button" aria-pressed="true" data-chip="all" style="background: #2b3a49; color: #ffffff; border: 0; border-radius: 4px; padding: 0 20px; min-height: 44px; font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.2em; cursor: pointer">ALL TOPICS</button>
+{% for t in blog.topics %}
+<button class="hs-chip" type="button" aria-pressed="false" data-chip="{{ t.id }}" style="background: #ffffff; color: #1f2a36; border: 0; border-radius: 4px; padding: 0 20px; min-height: 44px; font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; cursor: pointer">{{ t.label | upper }}</button>
+{% endfor %}
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 24px" data-post-grid>
+{% for post in blog.archive %}
+<a class="hs-card" href="/insights/{{ post.slug }}/" data-post data-topic="{{ post.topic }}" data-text="{{ (post.title | plain ~ ' ' ~ post.summary) | lower }}" style="display: flex; flex-direction: column; background: #ffffff; border-radius: 8px; overflow: hidden; text-decoration: none; color: inherit">
+{% if post.image_url %}
+<div style="height: 200px; position: relative; overflow: hidden; background: {{ post.color }}">
+<img src="{{ post.image_url }}" alt="{{ post.image_alt }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+</div>
+{% else %}
+<div style="height: 200px; position: relative; overflow: hidden; background: {{ post.color }}; display: flex; align-items: flex-end; padding: 18px; box-sizing: border-box">
+<div aria-hidden="true" style="position: absolute; right: -40px; top: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(255, 255, 255, 0.12)"></div>
+<span class="material-symbols-outlined" aria-hidden="true" style="position: absolute; top: 20px; left: 20px; font-size: 30px; color: #ffffff">{{ post.topicIcon }}</span>
+<span style="position: relative; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; color: #ffffff">[ARTICLE IMAGE]</span>
+</div>
+{% endif %}
+<div style="padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+<p style="margin: 0; font-size: 11px; font-weight: 800; letter-spacing: 0.25em; color: #9a5229">{{ post.topicLabel | upper }}</p>
+<h3 style="margin: 0; font-family: 'Noto Serif', Georgia, serif; font-weight: 400; font-size: 24px; line-height: 1.25; color: #1f2a36">{{ post.title | plain }}</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #4a5866; flex: 1">{{ post.summary }}</p>
+<p style="margin: 8px 0 0; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; color: #4f6a51">{{ post.dateLabel }} · {{ post.readTime }} MIN READ</p>
+</div>
+</a>
+{% endfor %}
+</div>
+
+<div data-post-empty hidden style="margin-top: 24px; background: #ffffff; border-radius: 8px; padding: 56px; text-align: center">
+<p style="margin: 0 0 8px; font-family: 'Noto Serif', Georgia, serif; font-size: 24px; color: #1f2a36">Nothing matches that search yet.</p>
+<p style="margin: 0; color: #4a5866">Try another word, or browse all topics.</p>
+</div>
+
+<div style="display: flex; justify-content: center; margin-top: 64px">
+<button class="hs-btn" type="button" data-load-more hidden style="background: #2b3a49; color: #ffffff; border: 0; border-radius: 4px; padding: 0 32px; min-height: 48px; font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.2em; cursor: pointer">LOAD MORE ARTICLES</button>
+</div>
+</div>
+</section>
+
+<section aria-label="Newsletter" style="background: #5d7b5f; color: #ffffff">
+<div style="max-width: 1280px; margin: 0 auto; padding: 112px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 5 1 420px">
+<p style="margin: 0 0 16px; font-size: 12px; font-weight: 800; letter-spacing: 0.3em; color: #ffffff">THE HEDDI BRIEF</p>
+<h2 style="margin: 0; font-family: 'Noto Serif', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.5vw, 52px); line-height: 1.1; color: #ffffff">New insights, <em>straight to your inbox</em>.</h2>
+</div>
+<form data-newsletter style="flex: 7 1 420px; display: flex; flex-direction: column; gap: 12px">
+<label for="nl-email" style="font-size: 12px; font-weight: 600; letter-spacing: 0.2em; color: #ffffff">WORK EMAIL</label>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px">
+<input id="nl-email" name="email" required autocomplete="email" type="email" placeholder="you@organization.org" style="flex: 1 1 260px; min-width: 0; background: #ffffff; border: 0; border-radius: 4px; color: #1f2a36; font-family: 'Manrope', sans-serif; font-size: 16px; padding: 0 18px; min-height: 52px; box-sizing: border-box" />
+<button class="hs-btn" type="submit" style="background: #2b3a49; color: #ffffff; border: 0; border-radius: 4px; padding: 0 28px; min-height: 52px; font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 0.15em; cursor: pointer">SUBSCRIBE</button>
+</div>
+<p data-newsletter-note aria-live="polite" style="margin: 0; font-size: 14px; color: #ffffff">No spam, unsubscribe anytime.</p>
+</form>
+</div>
+</section>
+
+<section aria-label="Book a discovery call" style="background: #ae5f32; color: #ffffff; position: relative; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; left: -140px; bottom: -220px; width: 420px; height: 420px; border-radius: 50%; background: #b0634f"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 128px clamp(20px, 5vw, 64px); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 32px">
+<h2 style="margin: 0; max-width: 860px; font-family: 'Noto Serif', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.5vw, 64px); line-height: 1.1; letter-spacing: -0.02em; color: #ffffff">Ready to turn your mission into <em>measurable impact</em>?</h2>
+<p style="margin: 0; max-width: 560px; font-size: 18px; color: #ffffff">A 45-minute discovery call to scope your priorities. We respond within 2 business days.</p>
+<a class="hs-btn" href="/contact/" style="background: #2b3a49; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 800; letter-spacing: 0.15em; padding: 0 32px; min-height: 52px; display: inline-flex; align-items: center; border-radius: 4px">BOOK A DISCOVERY CALL</a>
+</div>
+</section>

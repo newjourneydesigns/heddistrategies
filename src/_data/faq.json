@@ -1,0 +1,22 @@
+[
+  {
+    "q": "Who do you partner with?",
+    "a": "We partner with nonprofits and local governments, and often both at the same time. Our clients are leaders who are serious about community impact and ready to think strategically about how to get there.",
+    "color": "#734141"
+  },
+  {
+    "q": "What services do you provide?",
+    "a": "Our core services fall into three areas: Nonprofit Leadership & Strategy, Public Sector Consulting, and Community Systems Change. Whether you're strengthening your organization from the inside or building cross-sector collaboration, we meet you where you are.",
+    "color": "#2b3a49"
+  },
+  {
+    "q": "What experience do you bring to your work?",
+    "a": "Our team brings 15+ years of experience across strategy, behavioral science, and organizational transformation, combining analytical rigor with practical implementation support.",
+    "color": "#5d7b5f"
+  },
+  {
+    "q": "How do we get started?",
+    "a": "Every engagement starts with a 45-minute discovery call to understand your goals, constraints, and priorities. From there, we recommend a clear scope and next steps.",
+    "color": "#ae5f32"
+  }
+]

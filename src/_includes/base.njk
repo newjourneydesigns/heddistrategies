@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ page.url | absUrl(site.url) }}">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ ogTitle or title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:url" content="{{ page.url | absUrl(site.url) }}">
+<meta property="og:image" content="{{ (ogImage or site.ogImage) | absUrl(site.url) }}">
+<meta name="twitter:card" content="summary_large_image">
+{%- if noindex %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=block">
+<link rel="stylesheet" href="/assets/css/site.css">
+{%- if jsonLd %}
+<script type="application/ld+json">{{ jsonLd | json | safe }}</script>
+{%- endif %}
+</head>
+<body>
+<a class="hs-skip" href="#main">Skip to content</a>
+<div style="background: #f6f3ef; color: #1f2a36; font-family: 'Manrope', system-ui, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column">
+{%- set navOn = "color: #f0c4a4; text-decoration: none; font-size: 12px; font-weight: 800; letter-spacing: 0.2em; border-bottom: 2px solid #ce8054; padding-bottom: 4px" %}
+{%- set navOff = "color: #d8dcdf; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.2em" %}
+{%- set navItems = [["home", "/", "HOME"], ["about", "/about/", "ABOUT"], ["faq", "/faq/", "FAQ"], ["insights", "/insights/", "INSIGHTS"]] %}
+<header style="position: sticky; top: 0; z-index: 20; background: #2b3a49">
+<nav aria-label="Main" style="max-width: 1280px; margin: 0 auto; padding: 20px clamp(20px, 5vw, 64px); display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap">
+<a href="/" aria-label="Heddi Strategies home" style="display: flex; align-items: center"><img src="/assets/img/heddi-logo-type-white.png" alt="Heddi Strategies" width="3185" height="826" style="height: 32px; width: auto; display: block"></a>
+<button class="hs-menubtn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu" data-menu-btn><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
+<div class="hs-menu" id="site-menu" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
+{%- for item in navItems %}
+{%- if nav == item[0] %}
+<a href="{{ item[1] }}" aria-current="page" style="{{ navOn }}">{{ item[2] }}</a>
+{%- else %}
+<a class="hs-navlink" href="{{ item[1] }}" style="{{ navOff }}">{{ item[2] }}</a>
+{%- endif %}
+{%- endfor %}
+<a class="hs-btn" href="/contact/" {% if nav == "contact" %}aria-current="page" {% endif %}style="background: #ae5f32; color: #ffffff; text-decoration: none; font-size: 12px; font-weight: 800; letter-spacing: 0.15em; padding: 14px 22px; border-radius: 4px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">CONTACT US</a>
+</div>
+</nav>
+</header>
+<main id="main" style="flex: 1">
+{{ content | safe }}
+</main>
+<footer style="background: #19222c">
+<div style="max-width: 1280px; margin: 0 auto; padding: 56px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap">
+<img src="/assets/img/heddi-logo-type-white.png" alt="Heddi Strategies" width="3185" height="826" loading="lazy" style="height: 28px; width: auto">
+<span style="font-size: 13px; color: #d8dcdf">© <span data-year>2026</span> Heddi Strategies. Doing good, better.</span>
+</div>
+<div style="display: flex; gap: 28px; flex-wrap: wrap">
+<a class="hs-navlink" href="{{ site.linkedin }}" target="_blank" rel="noopener noreferrer" style="{{ navOff }}">LINKEDIN</a>
+<a class="hs-navlink" href="/contact/" style="{{ navOff }}">CONTACT</a>
+<a class="hs-navlink" href="/privacy/" style="{{ navOff }}">PRIVACY</a>
+</div>
+</div>
+</footer>
+</div>
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>
