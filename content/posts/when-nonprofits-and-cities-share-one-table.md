@@ -4,7 +4,7 @@ summary: "Cross-sector coalitions stall on trust and ownership. How shared decis
 topic: "systems"
 color: "#5d7b5f"
 featured: false
-draft: false
+draft: true
 author: "[Author name]"
 ---
 

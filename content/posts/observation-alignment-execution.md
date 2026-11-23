@@ -4,7 +4,7 @@ summary: "Most plans stall between the retreat and the Tuesday staff meeting. He
 topic: "approach"
 color: "#734141"
 featured: true
-draft: false
+draft: true
 author: "[Author name]"
 author_bio: "[AUTHOR NAME] is [ROLE] at Heddi Strategies. [ONE-LINE BIO.]"
 takeaways:

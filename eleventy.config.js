@@ -1,4 +1,5 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
+import matter from "gray-matter";
 
 // Site build settings. Pages live in src/, the finished site is written to _site/.
 const esc = (s) => String(s == null ? "" : s)
@@ -15,9 +16,17 @@ function inline(text) {
 }
 
 export default function (eleventyConfig) {
-  // The blog stays off the site until "blogEnabled" is set to true in src/_data/site.json.
-  const site = JSON.parse(readFileSync(new URL("./src/_data/site.json", import.meta.url), "utf8"));
-  if (!site.blogEnabled) eleventyConfig.ignores.add("src/insights/**");
+  // The blog shows up on its own once at least one article is published
+  // (draft off, and a publish date of today or earlier).
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/Chicago" });
+  const postsDir = new URL("./content/posts/", import.meta.url);
+  const blogLive = readdirSync(postsDir).filter((f) => f.endsWith(".md")).some((f) => {
+    const { data } = matter(readFileSync(new URL(f, postsDir), "utf8"));
+    const day = !data.date ? "" : data.date instanceof Date ? data.date.toISOString().slice(0, 10) : String(data.date).slice(0, 10);
+    return !data.draft && !(day && day > today);
+  });
+  if (!blogLive) eleventyConfig.ignores.add("src/insights/**");
+  eleventyConfig.addGlobalData("blogLive", blogLive);
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 

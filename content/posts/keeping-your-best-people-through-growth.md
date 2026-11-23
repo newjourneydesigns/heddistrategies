@@ -4,7 +4,7 @@ summary: "Rapid growth tests every team. Clear ownership and governance rhythms 
 topic: "nonprofit"
 color: "#ae5f32"
 featured: false
-draft: false
+draft: true
 author: "[Author name]"
 ---
 

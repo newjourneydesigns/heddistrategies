@@ -4,7 +4,7 @@ summary: "The gap between a good strategy and real change is usually execution. 
 topic: "systems"
 color: "#ab604d"
 featured: false
-draft: false
+draft: true
 author: "[Author name]"
 ---
 
