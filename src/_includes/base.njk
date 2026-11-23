@@ -38,7 +38,7 @@
 <button class="hs-menubtn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu" data-menu-btn><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
 <div class="hs-menu" id="site-menu" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
 {%- for item in navItems %}
-{%- if item[0] == "insights" and not site.blogEnabled %}
+{%- if item[0] == "insights" and not blogLive %}
 {%- elif nav == item[0] %}
 <a href="{{ item[1] }}" aria-current="page" style="{{ navOn }}">{{ item[2] }}</a>
 {%- else %}

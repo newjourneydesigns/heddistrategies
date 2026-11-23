@@ -4,7 +4,7 @@ summary: "Why the most effective local strategies pair public resources with the
 topic: "public"
 color: "#503237"
 featured: false
-draft: false
+draft: true
 author: "[Author name]"
 ---
 

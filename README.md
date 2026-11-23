@@ -6,7 +6,8 @@ The Heddi Strategies website and Insights blog. Hosted on Netlify at https://hed
 
 - Pages are written in `src/` and built into a plain, fast website by Eleventy.
 - Blog articles are Markdown files in `content/posts/`.
-- The blog is switched off for now. To turn it on, set `blogEnabled` to `true` in `src/_data/site.json`.
+- The Insights blog and its menu link appear on their own once at least one article is published. With no published articles, the blog stays hidden.
+- The newsletter signup is hidden until `newsletterEnabled` is `true` in `src/_data/site.json`.
 - Editors write articles in Pages CMS (https://app.pagescms.org), a free, open source CMS. Saving there commits to this repo, and Netlify rebuilds the site in about a minute.
 - The contact form is delivered by Web3Forms.
 

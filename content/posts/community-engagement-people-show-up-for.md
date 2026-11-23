@@ -4,7 +4,7 @@ summary: "A practical framework for local governments that want input from resid
 topic: "public"
 color: "#2b3a49"
 featured: false
-draft: false
+draft: true
 author: "[Author name]"
 ---
 

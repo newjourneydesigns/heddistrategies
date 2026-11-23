@@ -50,6 +50,7 @@ description: "Field notes on doing good, better. Practical ideas for nonprofit e
 </section>
 {% endif %}
 
+{% if blog.archive.length %}
 <section aria-label="All articles" style="background: #ebe5de; padding: 96px 0 128px">
 <div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px)">
 <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 48px">
@@ -105,7 +106,9 @@ description: "Field notes on doing good, better. Practical ideas for nonprofit e
 </div>
 </div>
 </section>
+{% endif %}
 
+{% if site.newsletterEnabled %}
 <section aria-label="Newsletter" style="background: #5d7b5f; color: #ffffff">
 <div style="max-width: 1280px; margin: 0 auto; padding: 112px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
 <div style="flex: 5 1 420px">
@@ -123,6 +126,7 @@ description: "Field notes on doing good, better. Practical ideas for nonprofit e
 </form>
 </div>
 </section>
+{% endif %}
 
 <section aria-label="Book a discovery call" style="background: #ae5f32; color: #ffffff; position: relative; overflow: hidden">
 <div aria-hidden="true" style="position: absolute; left: -140px; bottom: -220px; width: 420px; height: 420px; border-radius: 50%; background: #b0634f"></div>
