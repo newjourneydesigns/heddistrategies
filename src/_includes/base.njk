@@ -61,6 +61,25 @@
 {{ content | safe }}
 </main>
 <footer style="background: #19222c">
+{%- if newsletterLive and nav != "insights" %}
+<div style="max-width: 1280px; margin: 0 auto; padding: 56px clamp(20px, 5vw, 64px) 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px; padding: 36px clamp(24px, 4vw, 44px); background: #2b3a49; border-radius: 8px">
+<div style="flex: 1 1 320px">
+<p style="margin: 0 0 8px; font-size: 12px; font-weight: 800; letter-spacing: 0.3em; color: #f0c4a4">THE HEDDI BRIEF</p>
+<p style="margin: 0; font-family: 'Noto Serif', Georgia, serif; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.2; color: #ffffff">New insights, <em style="color: #f0c4a4">straight to your inbox.</em></p>
+</div>
+<form data-newsletter style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 10px">
+<label for="nl-foot" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Work email</label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px">
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<input id="nl-foot" name="email" type="email" required autocomplete="email" placeholder="you@organization.org" style="flex: 1 1 220px; min-width: 0; background: #ffffff; border: 0; border-radius: 4px; color: #1f2a36; font-family: 'Manrope', sans-serif; font-size: 16px; padding: 0 18px; min-height: 52px; box-sizing: border-box">
+<button class="hs-btn" type="submit" style="background: #ae5f32; color: #ffffff; border: 0; border-radius: 4px; padding: 0 28px; min-height: 52px; font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 0.15em; cursor: pointer">SUBSCRIBE</button>
+</div>
+<p data-newsletter-note aria-live="polite" style="margin: 0; font-size: 14px; color: #d8dcdf">No spam, unsubscribe anytime.</p>
+</form>
+</div>
+</div>
+{%- endif %}
 <div style="max-width: 1280px; margin: 0 auto; padding: 56px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
 <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap">
 <img src="/assets/img/heddi-logo-type-white.png" alt="Heddi Strategies" width="3185" height="826" loading="lazy" style="height: 28px; width: auto">

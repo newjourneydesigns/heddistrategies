@@ -117,7 +117,7 @@
       })
         .then(function (res) { if (!res.ok) throw new Error('failed'); return res.json(); })
         .then(function () { nl.reset(); note.textContent = 'You are on the list. Thank you.'; })
-        .catch(function () { note.textContent = 'Signup is not available yet. Please try again soon.'; })
+        .catch(function () { note.textContent = 'Something went wrong. Please check the address and try again.'; })
         .then(function () { btn.disabled = false; });
     });
   });

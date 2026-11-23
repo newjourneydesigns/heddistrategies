@@ -28,6 +28,9 @@ export default function (eleventyConfig) {
   if (!blogLive) eleventyConfig.ignores.add("src/insights/**");
   eleventyConfig.addGlobalData("blogLive", blogLive);
 
+  // The newsletter signup shows once the Resend key has been added in Netlify.
+  eleventyConfig.addGlobalData("newsletterLive", Boolean(process.env.RESEND_API_KEY));
+
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   eleventyConfig.addFilter("inline", inline);
