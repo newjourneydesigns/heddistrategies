@@ -7,7 +7,7 @@ The Heddi Strategies website and Insights blog. Hosted on Netlify at https://hed
 - Pages are written in `src/` and built into a plain, fast website by Eleventy.
 - Blog articles are Markdown files in `content/posts/`.
 - The Insights blog and its menu link appear on their own once at least one article is published. With no published articles, the blog stays hidden.
-- The newsletter signup is hidden until `newsletterEnabled` is `true` in `src/_data/site.json`.
+- Newsletter signups go to Resend (https://resend.com). The signup form appears on the site once `RESEND_API_KEY` is set in Netlify and the site is redeployed. Newsletters are written and sent from Resend, under Broadcasts.
 - Editors write articles in Pages CMS (https://app.pagescms.org), a free, open source CMS. Saving there commits to this repo, and Netlify rebuilds the site in about a minute.
 - The contact form is delivered by Web3Forms.
 
